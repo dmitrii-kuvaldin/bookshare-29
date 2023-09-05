@@ -1,0 +1,14 @@
+@mixin input {
+    background-color: #EDF2F7;
+    border: 2px solid #EDF2F7;
+    border-radius: 10px 0px 0px 10px;
+    transition: all .3s ease;
+    &:hover {
+        background-color: #EDF2F5;
+        border-color: $darkblue;
+    }
+    &:focus-visible {
+        background-color: #2a2f545f;
+        border-color: #2A2F54;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../variables';
+
+.button {
+  display: inline-block;
+  border-radius: 30px;
+  padding: 5px 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color $duration ease-in-out, border-color $duration ease-in-out;
+  border: 1px solid transparent;
+  @include noselect();
+  background-color: $darkblue;
+
+  &,
+  span {
+    color: $white;
+  }
+
+  i,
+  span,
+  path,
+  svg {
+    transition: all $duration ease-in-out;
+  }
+
+  &:hover {
+    background-color: darken($darkblue, 8%);
+  }
+
+  &:active {
+    background-color: darken($darkblue, 12%);
+    transform: translateY(1px);
+  }
+
+  &-card {
+    margin-top: 15px;
+    width: 100%;
+  }
+}

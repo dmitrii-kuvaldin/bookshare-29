@@ -1,0 +1,11 @@
+.terms {
+    text-align: center;
+}
+
+.text {
+    text-align: justify;
+}
+
+.agree {
+    background-color: blue;
+}

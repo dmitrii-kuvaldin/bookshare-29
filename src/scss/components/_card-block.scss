@@ -1,0 +1,42 @@
+@import '../variables';
+
+.card-block {
+  .skeleton {
+    border-color: transparent;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  
+    
+  }
+  width: 280px;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: 1px solid #B1B5C3;
+  background-color: $white;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &-desc {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+
+    &__top {
+    color: #182135;
+    }
+
+    &__bottom {
+      color: #848484;
+      }
+  }
+
+}

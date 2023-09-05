@@ -1,0 +1,117 @@
+@import '_mixin.scss';
+
+.form {
+    width: 40%;
+    margin: 15px 0;
+
+    &__wrap {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+}
+
+    &__input {
+        @include input();
+        height: 50px;
+        padding-left: 18px;
+        border-radius: 10px;
+        line-height: 40px;
+        &::placeholder {
+            color: #7A828A;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 15px;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            margin-right: 5px;
+            vertical-align: middle;
+            border-radius: 2px;
+            border: 1px solid $darkblue;
+            cursor: pointer;
+        }
+        &:checked+label::before {
+            background-color: $darkblue;
+            background-image: url('/assets/img/check.svg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+        }
+    }
+
+    &__label {
+        margin-bottom: 5px;
+        color: #425466;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+
+    }
+
+    span {
+        margin-top: 5px;
+        font-size: 11px;
+        line-height: 12px;
+        color: #718096;
+
+    }
+
+    p {
+        font-weight: 400;
+        line-height: 26px;
+        font-size: 16px;
+    }
+    .button {
+        width: 100%;
+    }
+
+    &__links {
+        font-weight: 600;
+        &:hover {
+            color: #718096;
+        }
+    }
+    &__bottom {
+        margin: 20px auto;
+        text-align: center;
+    }
+    
+    .input__disabled {
+        &:hover {
+            background-color: #EDF2F7;
+            border-color: #EDF2F7;
+        }
+    }
+
+    .button-profile {
+        width: 30%;
+
+        &__right {
+            background-color: transparent;
+            color: $darkblue;
+            border: 1px solid $darkblue;
+
+            &:hover {
+                background-color: #EDF2F7;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+}
+
+
+
